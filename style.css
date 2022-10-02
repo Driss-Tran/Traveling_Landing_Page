@@ -9,7 +9,7 @@
 .header{
     width: 100%;
     min-height: 100vh;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url("../img/Parga_beach.jpg");
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url("./img/Parga_beach.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
