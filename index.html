@@ -18,14 +18,14 @@
 <body>
     <header class="header">
         <div class="header_menu">
-            <div class="title"><h1>Driss Tours</h1></div>
+            <div class="title"><h1><a href="">Driss Tours</a> </h1></div>
             <div class="nav_bar_menu" id="nav_links">
                 <i class="fa fa-times margin_icon1" onclick="hideMenu()"></i>
                 <ul class="menu_list">
                     <li class="menu_item"><a href="#">Home</a></li>
-                    <li class="menu_item"><a href="#">About us</a></li>
-                    <li class="menu_item"><a href="#">Premium</a></li>
-                    <li class="menu_item"><a href="#">Blog</a></li>
+                    <li class="menu_item"><a href="#aboutUs">About us</a></li>
+                    <li class="menu_item"><a href="#premium">Premium</a></li>
+                    <li class="menu_item"><a href="#blog">Blog</a></li>
                     <button class="book_button" data-toggle="modal" data-target="#myModal">Book Now</button>
                 </ul>
             </div>
@@ -182,7 +182,7 @@
             
         </div>
         
-        <div class="content_title">
+        <div class="content_title" id="premium">
             <h1 class="content_title_text"><span style="color:#FFA336;">Top Tours</span> For You</h1>
             <p>Here are our some top tours for you. We recommend those tours because they are chosen and loved by most tourists.
                If you book now, we have some discount for you.
@@ -388,7 +388,7 @@
 
         <!--  -->
 
-        <div class="reason_choosing">
+        <div class="reason_choosing" id="aboutUs">
             <div class="content_title">
                 <h1 class="content_title_text">Why<span style="color:#FFA336;"> DrissTran </span>Tours ?</h1>
             </div>
@@ -433,7 +433,7 @@
             </div>
         </div>
 
-        <div class="customer_experienced">
+        <div class="customer_experienced" id="blog">
             <div class="content_title">
                 <h1 class="content_title_text">Here's What<span style="color:#FFA336;"> Our Customers </span>Say ?</h1>
             </div>
@@ -491,9 +491,9 @@
             <h6 style="color:#fff">Please follow us to get more information about our new tours and can get more discounts.</h6>
         </div>
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="Please enter your email address to get latest update and offers">
+            <input type="text" id="inputSubscribe" class="form-control" placeholder="Please enter your email address to get latest update and offers">
             <div class="input-group-append">
-            <button type="submit" class="input-group-text btn">SUBSCRIBE</button>
+            <button type="submit" class="input-group-text btn" onClick="checkEmailForSubscribe()">SUBSCRIBE</button>
             </div>
         </div>
     </div>
@@ -532,9 +532,9 @@
             <div class="footer_content col-lg-3">
                 <h4>Follow Us on</h4>
                 <div class="footer_content_item">
-                    <p class ="symbol"><i class="fa fa-facebook-official"></i> Facebook</p>
-                    <p class ="symbol"><i class="fa fa-youtube-play"></i> Youtube</p>
-                    <p class ="symbol"><i class="fa fa-twitter"></i> Twitter</p>
+                    <p class ="symbol_facebook"><i class="fa fa-facebook-official"></i> Facebook</p>
+                    <p class ="symbol_youtube"><i class="fa fa-youtube-play"></i> Youtube</p>
+                    <p class ="symbol_twitter"><i class="fa fa-twitter"></i> Twitter</p>
                 </div>
             </div>
 
@@ -555,31 +555,83 @@
       
 
         <div class="modal-header">
-          <h4 class="modal-title">Log in to book</h4>
+          <h4 class="modal-title">Log in</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body">
+            <div class="form-group">
+                <label for="usr1">Name:</label>
+                <input type="text" class="form-control" id="usr1" placeholder="Enter your name">
+              </div>
+              <div class="form-group">
+                <label for="pwd1">Password:</label>
+                <input type="password" class="form-control" id="pwd1" placeholder="Enter your password">
+              </div>
+            
+              <div id="error_msg" style="color:red;">
+                
+              </div>
+              <div class="message">
+                <a href="#">Forgot Password?</a>
+              </div>
+              <div class="message" style="display:flex;margin-top:10px;">
+                <h5 style="font-size: 18px; margin-right: 8px;">Do not have account ?</h5>
+                <a href="#" data-toggle="modal" data-target="#signUpModal" data-dismiss="modal">Sign up?</a>
+              </div>
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" onClick="checkLoginValidate()" id="loginBtn">Submit</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  <!--  Other modal-->
+
+  <div class="modal fade" id="signUpModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+
+        <div class="modal-header">
+          <h4 class="modal-title">Sign Up</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
 
         <div class="modal-body">
             <div class="form-group">
                 <label for="usr">Name:</label>
-                <input type="text" class="form-control" id="usr">
+                <input type="text" class="form-control" id="usr" placeholder="Enter your name">
               </div>
               <div class="form-group">
                 <label for="pwd">Password:</label>
-                <input type="password" class="form-control" id="pwd">
+                <input type="password" class="form-control" id="pwd" placeholder="Enter your password">
+              </div>
+              <div class="form-group">
+                <label for="pwd_confirm">Confirm Password:</label>
+                <input type="password" class="form-control" id="pwd_confirm" placeholder="Confirm your password">
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" class="form-control" id="email" placeholder="Enter your email">
               </div>
 
-              <div class="message">
-                <a href="#">Forgot Password?</a>
-              </div>
+              <div id="error_msg1" style="color:red;">
+                
+            </div>
+              
               <div class="message" style="display:flex;margin-top:10px;">
-                <h5 style="font-size: 18px; margin-right: 8px;">Do not have account ?</h5>
-                <a href="#">Sign up?</a>
+                <h5 style="font-size: 18px; margin-right: 8px;">Already have account ?</h5>
+                <a href="#" data-toggle="modal" data-target="#myModal" data-dismiss="modal">Log in</a>
               </div>
         </div>
         
         <div class="modal-footer">
-          <button type="button" class="btn btn-success" data-dismiss="modal">Submit</button>
+          <button type="button" class="btn btn-success" onClick="checkSignupValidate()" id="signupBtn">Submit</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
         </div>
         

@@ -4,7 +4,9 @@
     box-sizing: border-box;
 }
 
-
+html{
+    scroll-behavior: smooth;
+}
 /* Start Header  */
 .header{
     width: 100%;
@@ -19,6 +21,11 @@
 .title{
     padding-left: 5%;
     font-size: 20px;
+}
+
+.title h1 a{
+    text-decoration: none;
+    color: #fff;
 }
 
 .header_menu{
@@ -238,6 +245,7 @@
     max-width:65%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom:24px;
 
 }
 
@@ -571,11 +579,20 @@ h6{
     color: #FFA336;
 }
 
-.symbol:hover{
+.symbol_twitter:hover{
     cursor: pointer;
     color: rgb(8, 193, 226);
 }
 
+.symbol_facebook:hover{
+    cursor: pointer;
+    color: rgb(2, 81, 149);
+}
+
+.symbol_youtube:hover{
+    cursor: pointer;
+    color: red;
+}
 
 .margin_icon2{
     display: none;
@@ -597,4 +614,8 @@ h6{
 
 .header_menu i{
     display: none;
+}
+
+#inputSubscribe{
+    border:none;
 }
