@@ -276,6 +276,7 @@ html{
     padding-left: 0;
     padding-right: 0px;
     padding-bottom: 24px;
+    margin-top: 24px;
     max-width:370px;
     border: 1px solid rgb(228, 227, 227);
     border-radius:16px;
@@ -618,4 +619,23 @@ h6{
 
 #inputSubscribe{
     border:none;
+}
+
+.btn_display{
+    /* display:none; */
+    visibility:hidden;
+    position: fixed;
+    border-radius: 50%;
+    border:1px solid #FFA336;
+    background-color: #FFA336;
+    color: #fff;
+    right: 20px;
+    bottom: 20px;
+    padding:12px;
+}
+
+
+.btn_display:hover{
+    color: #fff;
+    background-color: #e69027;
 }

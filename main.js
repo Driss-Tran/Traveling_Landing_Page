@@ -1,8 +1,8 @@
 var navLinks = document.getElementById("nav_links");
-console.log(navLinks);
 // Dùng để dóng mở menu
 function showMenu() {
     navLinks.style.right = "0";
+    navLinks.style.transition="all 0.75s ease-in-out";
 }
 
 function hideMenu() {
@@ -73,4 +73,21 @@ function checkEmailForSubscribe(){
     else{
         alert("Subscribed successfully, we will send you every updated info.")
     }
+}
+
+
+(function displayButtonToTop(){
+    let scrollBtn = document.getElementById("scrollBtn");
+    const handleScroll = ()=>{
+        window.scrollY >=200 ? scrollBtn.style.visibility="visible": scrollBtn.style.visibility="hidden";
+    }
+
+    window.addEventListener("scroll",handleScroll);
+})()
+
+
+function clickGoToTop(){
+    let header = document.getElementById("header");
+    header.scrollIntoView();
+    
 }
