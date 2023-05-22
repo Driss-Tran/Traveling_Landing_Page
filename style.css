@@ -260,9 +260,11 @@ html{
     color: grey;
 }
 
-
+.input-group-append{
+    width: 100%;
+}
 .best_destination{
-    margin-left: 2%;
+    margin-left: 5%;
 }
 .card-body1{
     color: rgb(61,77,100);
